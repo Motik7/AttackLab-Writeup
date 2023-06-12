@@ -7,4 +7,4 @@ The Attack Lab is a demonstration of potential binary exploitation using code in
 ## Target801
 Target801 contains the attack lab code along with solutions. Solutions are of the form `sol\[\[:digit:\]\]\*.txt`. Given that the solutions are going to be mentioned in the writeups, these will likely be removed in a future commit. For non-solution files see README.txt within the folder.
 
-Please note that each writeup is meant to stand alone, and thus there might be redundancy between writeups where concepts are the same.
+**Please note that each writeup is meant to stand alone, and thus there might be redundancy between writeups where concepts are the same.**

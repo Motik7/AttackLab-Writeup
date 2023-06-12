@@ -45,8 +45,7 @@ It's clear that we need to get to `touch2` from `getbuf`. Looking at `getbuf` in
 ```
 
 Looking at the code, we see the following things happen. We put 0x18 bytes of storage on the stack, and then put our stack pointer into rdi. The function `Gets` is then called which we can assume
-inputs whatever we enter into the stack. This pens up the opportunity for code injection. For phase 1, this is simply just changing the return address, which is always the last thing on the stack when
-a function exits. We can confirm this by considering that we add 0x18 back to the rsp and then retq, which pops the value held at rsp and then goes to it. Therefore, if we can inject 0x18 bytes of random values and then the address of `touch2` when `retq` attempts to return to the address pointed to by rsp, it'll be our address. Looking again through the object dumb for `touch1` we see  
+inputs whatever we enter into the stack. This pens up the opportunity for code injection. For phase 2, this is putting our cookie into `%rdi` then calling `touch2`. Therefore, if we can inject 0x18 bytes of random values and then the address of `touch2` when `retq` attempts to return to the address pointed to by rsp, it'll be our address. Looking again through the object dumb for `touch1` we see  
 `0000000000401800 <touch2>`  
 which tells us that our `touch2` function is at address 0x401800. We remember that x86-64 operates on little endian, and thus in our string the address must be formatted correctly.
 

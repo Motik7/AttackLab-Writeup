@@ -57,4 +57,4 @@ which tells us that our touch1 function is at address 0x4017d4. We remember that
 ## Final Solution
 
 Knowing that our `getbuf` requires 0x18 or 1 * 16 + 8 * 1 = 24 bytes of input and then our return address, we can put the two together to yield the final injection string:
-`00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d4 17 40`  
+`00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d4 17 40 00`  

@@ -41,7 +41,7 @@ without a leading “0x.”
 • When functions hexmatch and strncmp are called, they push data onto the stack, overwriting portions of memory that held the buffer used by getbuf. As a result, you will need to be careful where
 you place the string representation of your cookie.
 
-Among other things the following image was provided. It is also useful to note that c3 is the hex encoding for the ret instrucition.
+Among other things the following image was provided. It is also useful to note that c3 is the hex encoding for the ret instruction.
 ![image](https://github.com/Motik7/AttackLab-Writeup/assets/60900283/5eb247a9-f732-44bc-9ae4-75f597f749e4)
 
 ## Analysis

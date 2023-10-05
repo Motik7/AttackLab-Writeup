@@ -33,6 +33,7 @@ Your task is to get `CTARGET` to execute the code for `touch3` rather than retur
 make it appear to `touch3` as if you have passed a string representation of your cookie as its argument.
 
 **Some Advice:**
+
 • You will need to include a string representation of your cookie in your exploit string. The string should consist of the eight hexadecimal digits (ordered from most to least significant)
 without a leading “0x.”  
 • Recall that a string is represented in C as a sequence of bytes followed by a byte with value 0. Type “man ascii” on any Linux machine to see the byte representations of the characters you need.  
